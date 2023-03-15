@@ -15,3 +15,19 @@ language_translator = LanguageTranslatorV3(
     authenticator=authenticator
 )
 language_translator.set_disable_ssl_verification(True)
+
+def englishToFrench(englishText):
+    frenchText = language_translator.translate(
+        text = englishText,
+        source = en,
+        target = fr
+    ).get_result()
+    return frenchText
+
+def frenchToEnglish(frenchText):
+    englishText = language_translator.translate(
+        text = englishText,
+        source = fr,
+        target = en
+    ).get_result()
+    return englishText
