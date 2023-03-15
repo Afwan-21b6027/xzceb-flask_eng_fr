@@ -8,3 +8,6 @@ class test_Translator(unittest.TestCase):
 
     def test_frenchToEnglish(self):
         self.assertEqual(frenchToEnglish(),null)
+
+if __name__ == '__main__':
+    unittest.main()
